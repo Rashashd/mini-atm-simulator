@@ -14,8 +14,11 @@ while choice != 4:
     
     elif choice == 2:
         deposit = int(input("Enter amount to deposit: "))
-        balance = balance + deposit
-        print("Deposit successful! New balance: ", balance, "\n")
+        if deposit > 0:
+            balance = balance + deposit
+            print("Deposit successful! New balance: ", balance, "\n")
+        else:
+            print("Please try again!")
     
     elif choice == 3:
         withdraw = int(input("Enter amount to withdraw: "))
