@@ -22,7 +22,9 @@ while choice != 4:
     
     elif choice == 3:
         withdraw = int(input("Enter amount to withdraw: "))
-        if withdraw <= balance:
+        if withdraw <= 0:
+            print("Invalid amount to withdraw!")
+        elif withdraw <= balance:
             balance = balance - withdraw
             print("Withdraw successful! New balance: ", balance, "\n")
         else:
